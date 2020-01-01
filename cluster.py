@@ -31,7 +31,26 @@ if __name__ == '__main__':
         count = count + 1
     x = [2, 3, 4, 5, 6, 7, 8, 9]
     plt.title('K_means MAHNOB-HCI Result Analysis')
-    plt.plot(x, JC_valence, )
+    plt.plot(x, JC_valence, 'ro-', label='JC_valence')
+    plt.plot(x, FMI_valence, 'go-', label='FMI_valence')
+    plt.plot(x, RI_valence, 'yo-', label='RI_valence')
+    plt.plot(x, JC_arousal, 'rx-', label='JC_arousal', markersize=10)
+    plt.plot(x, FMI_arousal, 'gx-', label='FMI_arousal', markersize=10)
+    plt.plot(x, RI_arousal, 'yx-', label='RI_arousal', markersize=10)
+    plt.plot(x, JC_emotion, 'r|-', label='JC_emotion', markersize=10)
+    plt.plot(x, FMI_emotion, 'g|-', label='FMI_emotion', markersize=10)
+    plt.plot(x, RI_emotion, 'y|-', label='RI_emotion', markersize=10)
+
+    plt.legend()  # 显示图例
+
+    plt.xlabel('k')
+    plt.ylabel('assess_parameter')
+    plt.show()
+
+    print(JC_valence, FMI_valence, RI_valence,
+          JC_arousal, FMI_arousal, RI_arousal)
+
+
 
 
 
